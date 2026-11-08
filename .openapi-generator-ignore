@@ -1,0 +1,12 @@
+# What openapi-generator would write that the repository keeps as its own or doesn't keep: the
+# README, composer.json, phpunit.xml.dist and .gitignore are the repository's own, and the
+# generator's style settings, CI file, push script, docs and tests aren't kept.
+README.md
+composer.json
+phpunit.xml.dist
+.gitignore
+.php-cs-fixer.dist.php
+.travis.yml
+git_push.sh
+docs/**
+test/**

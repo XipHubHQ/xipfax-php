@@ -1,0 +1,51 @@
+{
+    "name": "xiphub/xipfax-sdk",
+    "description": "XipFax's API for PHP, generated from its OpenAPI document.",
+    "type": "library",
+    "keywords": [
+        "xipfax",
+        "fax",
+        "api",
+        "sdk"
+    ],
+    "homepage": "https://xipfax.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "XipFax",
+            "email": "help@xipfax.com"
+        }
+    ],
+    "support": {
+        "email": "help@xipfax.com",
+        "docs": "https://developer.xipfax.com/docs/",
+        "source": "https://github.com/XipHubHQ/xipfax-php"
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "XipHub\\XipFax\\Sdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "XipHub\\XipFax\\Sdk\\Tests\\": "tests/",
+            "XipHub\\XipFax\\Sdk\\Examples\\": "examples/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.4.0"
+        },
+        "sort-packages": true
+    }
+}

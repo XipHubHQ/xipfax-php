@@ -1,0 +1,30 @@
+# openapi-generator 7.17.0's settings for the SDK, which scripts/generate.sh passes it with the
+# document scripts/sdk-document.jq writes. The client is Guzzle 7's. What Composer publishes, the
+# package's name, its license and its authors, is composer.json's alone: the generator writes those
+# only into files the repository doesn't keep.
+library: guzzle
+# The SDK's version, which the generator writes into the user agent each request names.
+# scripts/gates.sh holds httpUserAgent to it, so each release names it in both, and its tag.
+artifactVersion: 0.1.0
+httpUserAgent: xipfax-php/0.1.0
+# The SDK's PHP namespace, named here alone: the generator writes the APIs in its Api namespace and
+# the models in its Model namespace, scripts/generate.sh writes ApiVersion.php in it, and
+# scripts/gates.sh holds the namespace composer.json loads from src/ to it.
+invokerPackage: XipHub\XipFax\Sdk
+srcBasePath: src
+# A request's parameters and a model's members are camelCase, as PHP's named arguments read them:
+# getFax(faxId: 'fax_1').
+variableNamingConvention: camelCase
+hideGenerationTimestamp: true
+globalProperties:
+  apiTests: 'false'
+  modelTests: 'false'
+  apiDocs: 'false'
+  modelDocs: 'false'
+# Error is PHP's own class's name: the API's refusal is ApiError, as the TypeScript SDK's is.
+modelNameMappings:
+  Error: ApiError
+inlineSchemaNameMappings:
+  Error_error: ApiErrorObject
+  Error_error_details_inner: ApiErrorDetail
+  Office_sources_inner: OfficeSource
