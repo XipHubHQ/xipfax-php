@@ -52,7 +52,7 @@ Where the API refuses, it throws an `ApiException`, whose `getCode()` is the HTT
 refusal the reference gives the method, its `getResponseObject()` is the API's error object, an
 `ApiError`, whose error's `getCode()` is the one to branch on; for any other, it's null, and
 `getResponseBody()` holds what came. A request that never reached XipFax throws an `ApiException`
-with no response. Each method has an `…Async` form too, which answers Guzzle's promise of the same.
+with no response.
 
 `new XipFax($apiKey, $baseUrl, $guzzle)` takes, after your key, another address than
 `https://api.xipfax.com`, and Guzzle's request options for each request, such as
