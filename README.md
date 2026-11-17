@@ -5,12 +5,6 @@ number or a government office, and follow each fax until it's delivered. The SDK
 the API's own document, so its methods and types are the API's. It needs PHP 8.1 or later, and
 sends its requests with Guzzle 7.
 
-## Install
-
-```sh
-composer require xiphub/xipfax-sdk
-```
-
 ## Make an API key
 
 Sign in to the [developer console](https://developer.xipfax.com/console/), open API keys and make a
@@ -176,10 +170,6 @@ copy the new document over `openapi.json`, run `scripts/generate.sh`, and commit
 `composer.json` and `composer.lock`, and that every file reads and every class loads;
 `scripts/test.sh` runs the specs. Both run Composer and PHP in Docker, by `scripts/docker.sh`, on
 what `scripts/fetch.sh` fetched.
-
-## Help
-
-Write to [help@xipfax.com](mailto:help@xipfax.com).
 
 ## License
 
