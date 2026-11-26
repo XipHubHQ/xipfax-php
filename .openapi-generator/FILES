@@ -31,6 +31,7 @@ src/Model/PlanAnswer.php
 src/Model/PlanNumber.php
 src/Model/PlanPages.php
 src/Model/Quote.php
+src/Model/QuoteBody.php
 src/Model/QuotePrice.php
 src/Model/SendDraft.php
 src/Model/Sent.php

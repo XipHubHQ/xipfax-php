@@ -12,12 +12,10 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "XipFax",
-            "email": "help@xipfax.com"
+            "name": "XipFax"
         }
     ],
     "support": {
-        "email": "help@xipfax.com",
         "docs": "https://developer.xipfax.com/docs/",
         "source": "https://github.com/XipHubHQ/xipfax-php"
     },
