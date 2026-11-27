@@ -12,6 +12,7 @@ use XipHub\XipFax\Sdk\Model\Fax;
 use XipHub\XipFax\Sdk\Model\FaxEvent;
 use XipHub\XipFax\Sdk\Model\NewDocument;
 use XipHub\XipFax\Sdk\Model\NewWebhookEndpoint;
+use XipHub\XipFax\Sdk\Model\QuoteBody;
 use XipHub\XipFax\Sdk\Model\SendDraft;
 use XipHub\XipFax\Sdk\ObjectSerializer;
 use XipHub\XipFax\Sdk\Tests\Support\Answers;
@@ -48,6 +49,9 @@ final class ContractTest extends TestCase
     {
         return [
             'getQuote' => static fn (XipFax $xipfax): mixed => $xipfax->quote->getQuote(3),
+            'quoteNumber' => static fn (XipFax $xipfax): mixed => $xipfax->quote->quoteNumber(
+                new QuoteBody(['pages' => 3, 'toNumber' => '+44 20 7946 0958'])
+            ),
             'getDraft' => static fn (XipFax $xipfax): mixed => $xipfax->draft->getDraft(),
             'addDocument' => static fn (XipFax $xipfax): mixed => $xipfax->draft->addDocument(
                 'add-letter-1',
@@ -87,6 +91,7 @@ final class ContractTest extends TestCase
     {
         return [
             'getQuote' => Answers::QUOTE,
+            'quoteNumber' => Answers::QUOTE,
             'getDraft' => '{"id":"fax_1","documents":[]}',
             'addDocument' => '{"document":' . Answers::document('doc_1', 'letter.pdf') . ',"upload":null}',
             'completeDocument' => Answers::document('doc_1', 'letter.pdf'),
